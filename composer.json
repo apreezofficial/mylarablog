@@ -1,0 +1,5 @@
+{
+    "require": {
+        "laravel/laravel": "^12.3"
+    }
+}
