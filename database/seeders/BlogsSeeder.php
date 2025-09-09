@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use illuminate\Support\Facades\DB
+use illuminate\Support\Facades\DB;
 class BlogsSeeder extends Seeder
 {
     /**
@@ -12,8 +12,7 @@ class BlogsSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('blogs')->insert(
-          [
+        DB::table('blogs')->insert([ [
             'title' => "Apcodesphere The leading Developer",
            'blogger_id' => 1,
             'category_id' => 1,
@@ -36,7 +35,6 @@ class BlogsSeeder extends Seeder
             'status' => 'draft',
             'slug' => "dokun-thr-leading-developer",
             'content' => 'dokun'
-          ]
-          )
+          ]]);
     }
 }

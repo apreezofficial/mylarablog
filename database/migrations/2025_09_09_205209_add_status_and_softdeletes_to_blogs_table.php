@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('blogs', function (Blueprint $table) {
-            $table = Enum('status', ['draft', 'active', 'hidden'])->default('pending');
-            $table = softdeletes();
+            $table->Enum('status', ['draft', 'active', 'hidden'])->default('pending');
+            $table->softDeletes();
         });
     }
 
