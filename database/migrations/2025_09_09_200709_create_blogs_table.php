@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->uuid('blogger_id');
+            $table->uuid('blogger_id')->references('id')->on('users');
             $table->string('category_id')->references('id')->on('categories');
             $table->boolean('protected')->default(false);
             $table->string('title');
