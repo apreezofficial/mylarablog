@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Blogs;
 use Illuminate\Http\Request;
-
 class BlogsController extends Controller
 {
     /**
@@ -12,7 +11,8 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        //
+        $blogs_list = Blogs::all();
+        return $blogs_list;
     }
 
     /**
@@ -36,7 +36,7 @@ class BlogsController extends Controller
      */
     public function show(Blogs $blogs)
     {
-        //
+        
     }
 
     /**
